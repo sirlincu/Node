@@ -1,3 +1,9 @@
 import validator from 'validator';
 
-console.log(validator.isLowercase("lincoln"));
+let name: string = "lcu";
+
+if(validator.isLowercase(name)){
+    console.log(`A string ${name} é toda minuscula`);
+}else {
+    console.log(`A string ${name} não é toda minuscula`);
+}
