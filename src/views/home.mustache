@@ -5,6 +5,9 @@
 <body>
     <h1>Título da Página</h1>
     <hr/>
-    Opa, tudo bem, como vai?
+     - {{ user.name }} é velho? 
+    {{#showOld}}
+        - tenho {{user.age}} anos
+    {{/showOld}}
 </body>
 </html>

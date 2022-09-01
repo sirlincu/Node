@@ -6,7 +6,20 @@ router.get('/', (req: Request, res: Response)=>{
     // pegar os produtos do banco de dados
     // organizar as informações desses produtos
     // envia para o template engine
-    res.render('home');
+    let user = {
+        name: 'cleito',
+        age: 24
+    }
+    let showOld: boolean = false;
+
+    if(user.age > 20){
+        showOld = true;
+    }
+
+    res.render('home', {
+        user,
+        showOld
+    });
 });
 
 router.get('/contato', (req: Request, res: Response)=>{
