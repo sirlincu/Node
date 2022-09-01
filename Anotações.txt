@@ -1,0 +1,9 @@
+MÉTODOS MAIS COMUNS
+GET, POST, PUT, DELETE
+get => acessar pagina
+post => receber os dados internamente
+
+req: Request        var req tipo Request
+requisição 
+res: Response       var res tipo Response
+resposta
