@@ -14,4 +14,8 @@ router.get('/sobre', (req: Request, res: Response)=>{
     res.send('Página institucional sobre a empresa.');
 });
 
+router.get('/noticias', (req: Request, res: Response)=>{
+    res.send('Lista de notícias.');
+});
+
 export default router;
