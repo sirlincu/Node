@@ -9,5 +9,24 @@
     {{#showOld}}
         - tenho {{user.age}} anos
     {{/showOld}}
+
+    <hr/>
+
+    <h2>Produtos</h2>
+    <ul>
+        {{#products}}
+            <li>{{title}} - R$ {{price}}</li>
+        {{/products}}
+    </ul>
+    <hr/>
+    <ul>
+        {{#frasesDoDia}}
+            <li>{{.}} </li>
+        {{/frasesDoDia}}
+        {{^frasesDoDia}}
+            Não há frases motivacionais hoje.
+        {{/frasesDoDia}}
+    </ul>
+
 </body>
 </html>
