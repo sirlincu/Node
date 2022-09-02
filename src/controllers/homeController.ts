@@ -1,5 +1,7 @@
 import { Response, Request } from "express";
 
+import { Product } from '../models/Product';
+
 export const home = (req: Request, res: Response)=>{
     // pegar os produtos do banco de dados
     // organizar as informações desses produtos
@@ -14,14 +16,14 @@ export const home = (req: Request, res: Response)=>{
         showOld = true;
     }
 
+    let list = Product.getAll();
+    let expansiveList = Product.getFromPriceAfter(16);
+
     res.render('pages/home', {
         user,
         showOld,
-        products: [
-            {title: 'Produto X', price: 10},
-            {title: 'Produto Y', price: 15},
-            {title: 'Produto Z', price: 30}
-        ],
+        products: list,
+        expensives: expansiveList,
         frasesDoDia: [
             'Bom dia',
             'O importante é o caminho',
