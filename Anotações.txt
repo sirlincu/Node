@@ -7,3 +7,12 @@ req: Request        var req tipo Request
 requisição 
 res: Response       var res tipo Response
 resposta
+
+MVC
+
+M = MODEL
+V = VIEW
+C = CONTROLLER
+
+- Separar cada arquivo no seu bloco
+- Juntar tudo para rodar o sistema
